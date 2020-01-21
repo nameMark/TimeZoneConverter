@@ -25,8 +25,19 @@ public class Main {
         );                            // Renders
 
 
-        Hashtable<Integer, String> numbers = new Hashtable<Integer, String>();
-        numbers.put(1, "one");
+        Hashtable <String, Integer> numbers = new Hashtable<String, Integer>();
+        numbers.put("one", 1);
+        numbers.put("two", 2);
+        numbers.put("three", 3);
+
+        System.out.println(numbers.get("one"));
+
+
+        Integer n = numbers.get("two");
+        if (n != null) {
+            System.out.println("two = " + n);
+        }
+
 
         
 
