@@ -71,3 +71,65 @@ public class Main {
         
     }
 }
+
+
+
+
+
+
+package com.company;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.*;
+import java.text.*;
+import java.util.Scanner;
+import java.util.Date;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("E yyyy/MM/dd HH-mm-ss ");
+        Scanner scanner = new Scanner(System.in);
+
+        String toWhatTimeYouWantConevert;
+        String en = scanner.nextLine();
+
+        Hashtable<String, Integer> numbers = new Hashtable<String, Integer>();
+        numbers.put("one", 1);
+        numbers.put("two", 2);
+        numbers.put("three", 3);
+
+        System.out.println(numbers.get(en));
+
+
+        Integer n = numbers.get(en);
+        if (n != null)
+            System.out.println("two = " + n);
+
+
+        while (true) {
+
+
+
+            System.out.print("To witch time you want to convert:");
+            toWhatTimeYouWantConevert = scanner.nextLine();
+            // First String input
+
+            if ((toWhatTimeYouWantConevert.equals("plus hour"))){
+                int yourTimeZoneHour = date.getHours()+1;
+                System.out.println(toWhatTimeYouWantConevert);
+                System.out.println("your time plus one hour " + yourTimeZoneHour );
+                break;
+            }
+            System.out.println("Invalid input! Enter value again.:");
+        }
+
+
+
+
+
+
+    }
+}
