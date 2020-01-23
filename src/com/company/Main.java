@@ -16,7 +16,7 @@ public class Main {
         int yourHoursInYourTimeZone;
         int yourMinutesInYourTimeZone;
         int yourSecondsInYourTimeZone;
-
+        int yourHoursInYourTimeZoneNew = 0;
 
         String houwManyHoursYouWantToAdd;
 
@@ -61,7 +61,10 @@ public class Main {
 
 
                 if (n != null) {
-                    System.out.println(yourHoursInYourTimeZone + n + " hour(s)" + " " + yourMinutesInYourTimeZone + " minute(s)" + " " + yourSecondsInYourTimeZone + (" second(s)"));
+                    if (yourHoursInYourTimeZone + n > 24) {
+                        yourHoursInYourTimeZoneNew = (yourHoursInYourTimeZone - 24);
+                    }
+                    System.out.println(yourHoursInYourTimeZoneNew + n + " hour(s)" + " " + yourHoursInYourTimeZoneNew + " minute(s)" + " " + yourHoursInYourTimeZoneNew + (" second(s)"));
                 }
 
                 break;
